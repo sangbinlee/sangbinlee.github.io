@@ -108,3 +108,18 @@ openlayers example
 
 # step 1
 https://startbootstrap.com/
+
+
+#    key: 'AvSRvuJZZuZnoWxbMqwK05EEyBclwJFJL1VVnUoWt1pirHYwUuSS4JcJ3aDTdv7G',
+# AvSRvuJZZuZnoWxbMqwK05EEyBclwJFJL1VVnUoWt1pirHYwUuSS4JcJ3aDTdv7G
+
+# npm i ol --save
+https://openlayers.org/en/latest/doc/tutorials/bundle.html
+
+# npm install --save-dev parcel-bundler
+
+
+# gulp 
+  "scripts": {
+    // "test": "echo 'hi'",
+    // "start": "node_modules/.bin/gulp watch",

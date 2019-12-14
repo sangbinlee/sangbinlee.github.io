@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Shared Views</title>
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/css/ol.css" type="text/css"> -->
+    <!-- <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script> -->
+    <style>
+      .map {
+        width: 100%;
+        height:400px;
+      }
+      @media (min-width: 800px) {
+        .wrapper {
+          display: flex;
+        }
+        .half {
+          padding: 0 10px;
+          width: 50%;
+          float: left;
+        }
+      }
+    </style>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/build/ol.js"></script> -->
+  </head>
+  <body>
 
-<head>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>openlayers_1</title>
-
-  <!-- Custom fonts for this template--> 
-
-</head>
-
-<body id="page-top">
-               
-  
-
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
-
-  <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
-
-</body>
-
+    <div id="map"></div>
+    
+    <div id="map"></div>
+    <div class="wrapper">
+      <div class="half">
+        <h4>Road</h4>
+        <div id="roadMap" class="map"></div>
+      </div>
+      <div class="half">
+        <h4>Aerial</h4>
+        <div id="aerialMap" class="map"></div>
+      </div>
+    </div>
+    <!-- <script src="openlayers_1.js"></script> -->
+    <script src="./bundle.js"></script>
+  </body>
 </html>
