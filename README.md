@@ -37,7 +37,10 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
 
  
-# vs code - auto save check
+# vs code - 
+auto save check
+# nodejs
+# git
 
 # step 0 
 ctrl + j
@@ -50,13 +53,58 @@ npm init
 # step 4
 sangbinlee.github.io\package.json
 # step 1
-git config --global user.name "sangbinlee"                                                                                                              
-git config --global user.email sangbinlee9@gmail.com
-# step 1
-# step 1
-# step 1
-# step 1
-# step 1
+git config --global user.name "sangbinlee"                                                                 git config --global user.email sangbinlee9@gmail.com
 # step 1 home page 
 https://sangbinlee.github.io/
 
+
+# step 1
+유투부 동영상 링크
+# step 1
+읽을 책 관리
+# step 1
+스터디 관리
+
+# step 1
+알고리즘, 코드 조각 
+# step 1
+아이디어 를 코드로 만들기 - every day , i'll make function code
+
+# step 1
+오늘 할일 관리
+# step 1
+이번주 할일 관리
+# step 1
+이번달 할일 관리
+# step 1
+올해 할일 관리
+# step 1
+운동 , 헬스 관리
+# step 1
+고정 비용 관리
+# step 1
+식사 일기- 운동 일기- 건강 일기
+# step 1
+좋은 습관 매일 만들기
+
+
+# step 1
+android app, ios app
+
+
+# step 1
+intro page
+# step 1
+auth facebook
+auth github
+auth google
+
+# step 1
+좋은 습관 매일 만들기
+every day , i'll make function
+# step 1
+openlayers example
+
+
+# step 1
+https://startbootstrap.com/
