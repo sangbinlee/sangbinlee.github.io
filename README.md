@@ -35,3 +35,25 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+ 
+# vs code - auto save check
+
+# step 0 
+ctrl + j
+# step 1 
+git clone https://github.com/sangbinlee/sangbinlee.github.io.git
+# step 2
+cd .\sangbinlee.github.io\ 
+# step 3
+npm init                   
+# step 4
+sangbinlee.github.io\package.json
+# step 1
+# step 1
+# step 1
+# step 1
+# step 1
+# step 1
+# step 1
+

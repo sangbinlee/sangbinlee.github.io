@@ -1,0 +1,23 @@
+{
+  "name": "sangbinlee.github.io",
+  "version": "1.0.0",
+  "description": "home page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'hi'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sangbinlee/sangbinlee.github.io.git"
+  },
+  "keywords": [
+    "web",
+    "test"
+  ],
+  "author": "sangbin lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sangbinlee/sangbinlee.github.io/issues"
+  },
+  "homepage": "https://github.com/sangbinlee/sangbinlee.github.io#readme"
+}
