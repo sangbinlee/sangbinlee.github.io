@@ -50,6 +50,8 @@ npm init
 # step 4
 sangbinlee.github.io\package.json
 # step 1
+git config --global user.name "sangbinlee"                                                                                                              
+git config --global user.email sangbinlee9@gmail.com
 # step 1
 # step 1
 # step 1
