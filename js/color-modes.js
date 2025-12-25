@@ -59,7 +59,7 @@
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
     const storedTheme = getStoredTheme()
-    console.log(storedTheme)
+    console.log('■ storedTheme=', storedTheme)
     if (storedTheme !== 'light' && storedTheme !== 'dark') {
       setTheme(getPreferredTheme())
     }
@@ -72,6 +72,7 @@
       .forEach(toggle => {
         toggle.addEventListener('click', () => {
           const theme = toggle.getAttribute('data-bs-theme-value')
+          console.log('■ theme=', theme)
           setStoredTheme(theme)
           setTheme(theme)
           showActiveTheme(theme, true)
