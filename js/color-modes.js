@@ -20,6 +20,8 @@
   }
 
   const setTheme = theme => {
+    
+          console.log('■ theme2=', theme)
     if (theme === 'auto') {
       document.documentElement.setAttribute('data-bs-theme', (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'))
     } else {
@@ -30,7 +32,10 @@
   setTheme(getPreferredTheme())
 
   const showActiveTheme = (theme, focus = false) => {
-    const themeSwitcher = document.querySelector('#bd-theme')
+    
+          console.log('■ theme3=', theme)
+          const themeSwitcher = document.querySelector('#bd-theme')
+          console.log('■ themeSwitcher=', themeSwitcher)
 
     if (!themeSwitcher) {
       return
