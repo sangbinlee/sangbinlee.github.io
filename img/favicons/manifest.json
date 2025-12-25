@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://getbootstrap.com/?utm_source=a2hs", 
+  "start_url": "/?utm_source=a2hs", 
   "theme_color": "#7952b3",
   "background_color": "#7952b3",
   "display": "standalone"
