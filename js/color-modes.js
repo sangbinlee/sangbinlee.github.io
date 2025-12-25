@@ -7,7 +7,7 @@
 (() => {
   'use strict'
 
-    console.clear()
+    // console.clear()
   console.log('js loading............', 0)
   console.log('color-modes.js', 0)
   console.log("window.matchMedia('(prefers-color-scheme: dark)').matches =", window.matchMedia('(prefers-color-scheme: dark)').matches  )
