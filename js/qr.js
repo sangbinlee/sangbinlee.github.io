@@ -2,12 +2,7 @@ var url = window.location.href;
 var id = 'qrcode';
 console.log('■■■■■■■■■■■■■ url=', url);
 
-
-// To change the QR code dynamically later:
-function generateQRCode(url, elementId) {
-    // To change the QR code dynamically later:
-    qrcode.makeCode(url);
-}
+ 
 
 function copyurl() {
 
@@ -52,5 +47,7 @@ function copyCurrentUrl() {
       console.error('Could not copy URL: ', err);
       messageElement.textContent = 'Failed to copy URL.';
     });
+
 }
 
+ 

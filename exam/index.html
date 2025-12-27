@@ -9,8 +9,11 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Astro v5.13.2" />
-    <title>Signin Template · Bootstrap v5.3</title>
-    <link rel="canonical" href="hhttps://sangbinlee.github.io/auth/" />
+    <title>모의고사</title>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/album/"
+    />
     <script src="/js/color-modes.js"></script>
 
     <link
@@ -19,6 +22,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+
     <link
       rel="apple-touch-icon"
       href="https://getbootstrap.com/docs/5.3/assets/img/favicons/apple-touch-icon.png"
@@ -47,9 +51,7 @@
       href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico"
     />
     <meta name="theme-color" content="#712cf9" />
-    <!-- <link href="/css/sign-in.css" rel="stylesheet" /> -->
-
-    <link href="/css/cover.css" rel="stylesheet" />
+    <link href="/css/qr.css" rel="stylesheet" />
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -124,7 +126,7 @@
       }
     </style>
   </head>
-  <body class="d-flex align-items-center py-4 bg-body-tertiary">
+  <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path
@@ -221,72 +223,153 @@
       </ul>
     </div>
 
-    <!-- header  -->
-    <!-- <div class="container"> <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"> <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"> <svg class="bi me-2" width="40" height="32" aria-hidden="true"><use xlink:href="#bootstrap"></use></svg> <span class="fs-4">Simple header</span> </a> <ul class="nav nav-pills"> <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li> <li class="nav-item"><a href="#" class="nav-link">Features</a></li> <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li> <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li> <li class="nav-item"><a href="#" class="nav-link">About</a></li> </ul> </header> </div> -->
-    <!-- <div class="b-example-divider"></div>     -->
 
-    <!-- <div class="b-example-divider"></div> -->
 
-    <div class="container" style="
-    position: absolute;
-    top: 0;
-    padding: 50px;">
-      <header class="mb-auto">
-        <div>
-          <h3 class="float-md-start mb-0">test</h3>
-          <nav class="nav nav-masthead justify-content-center float-md-end">
-            <a
-              class="nav-link fw-bold py-1 px-0 active"
-              aria-current="page"
-              href="/"
-              >Home</a
-            >
-          </nav>
+
+
+
+    <header data-bs-theme="dark">
+      <div class="collapse text-bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4>About</h4>
+              <p class="text-body-secondary">
+                Add some information about the album below, the author, or any
+                other background context. Make it a few sentences long so folks
+                can pick up some informative tidbits. Then, link them off to
+                some social networking sites or contact information.
+              </p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4>Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Follow on X</a></li>
+                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </header>
-    </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              aria-hidden="true"
+              class="me-2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+              ></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+            <strong>Album</strong>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarHeader"
+            aria-controls="navbarHeader"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
 
-    <main class="container w-100 m-auto mt-5 py-5">
-      <div class="bg-body-tertiary p-5 rounded mt-5 py-5">
-        <h1>url copy example</h1>
-        <p class="lead">
-          url copy
-        </p>
-
-        <button onclick="copyCurrentUrl()">Copy Page URL</button>
-        <span id="message"></span>
-
-        
-        
-        
-    </div>
-     
 
 
-    </main>
+    <main>
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">[프로젝트 배경 및 목표]</h1>
+            <p class="lead text-body-secondary">
+- 본 프로젝트는 IT 수험서(AICE, 빅데이터 분석기사) 독자들이 책에 있는 QR코드를 통해 손쉽게 실습 환경(Google Colab)에 접속하여 모의고사를 풀 수 있도록 돕는 '브릿지(Bridge) 웹사이트'를 구축하는 것입니다.
+<br/>
+- 복잡한 회원가입이나 서버 구축 없이, 도서 구매 인증(코드 입력)만으로 실습이 가능한 간편한 시스템을 지향합니다.
+            </p>
+            <p>
+              <a href="#" class="btn btn-primary my-2">Main call to action</a>
+              <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="exams">
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="모의고사"></div> 
+                <div class="card-body">
+                  <p class="card-text">
+                    1회 모의고사입니다.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                        onclick="goExams()"
+                      >
+                        View
+                      </button>
+                      <!-- <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Edit
+                      </button> -->
+                    </div>
+                    <!-- <small class="text-body-secondary">9 mins</small> -->
+                  </div>
+                </div>
+              </div>
+            </div>
 
+ 
 
-
-    <main class="container w-100 m-auto mt-5 py-5">
-      <div class="bg-body-tertiary p-5 rounded mt-5 py-5">
-        <h1>url to qrcode example</h1>
-        <p class="lead">
-          url to qrcode
-        </p> 
-        <div id="qrcode"></div>
+          </div>
+        </div>
       </div>
     </main>
-
-
-
-
+    <footer class="text-body-secondary py-5">
+      <div class="container">
+        <p class="float-end mb-1"><a href="#">Back to top</a></p>
+        <p class="mb-1">
+          Album example is &copy; Bootstrap, but please download and customize
+          it for yourself!
+        </p>
+        <p class="mb-0">
+          New to Bootstrap? <a href="/">Visit the homepage</a> or read our
+          <a href="/docs/5.3/getting-started/introduction"
+            >getting started guide</a
+          >.
+        </p>
+      </div>
+    </footer>
     <script
       src="/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <script src="/js/qr.js"></script>
-
+    <script src="/js/qrs.js"></script>
   </body>
 </html>

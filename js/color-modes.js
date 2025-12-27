@@ -7,65 +7,19 @@
 (() => {
   'use strict'
 
-    // console.clear()
-  console.log('js loading............', 0)
-  console.log('color-modes.js', 0)
-  console.log("window.matchMedia('(prefers-color-scheme: dark)').matches =", window.matchMedia('(prefers-color-scheme: dark)').matches  )
+  const getStoredTheme = () => localStorage.getItem('theme')
+  const setStoredTheme = theme => localStorage.setItem('theme', theme)
 
-  /**
-   * 
-   * window.matchMedia('(prefers-color-scheme: dark)').matches
-   * 
-  */
-  if (window.matchMedia('(prefers-color-scheme: dark)').matches) { console.log("현재 다크 모드입니다 🌙"); } else { console.log("현재 라이트 모드입니다 ☀️"); }
-
-
-  const getStoredTheme = () => {
-    // console.clear()
-      console.log("■■■■■ getStoredTheme ■■■■■■■■■■■■■■■■■■■■■■■ localStorage.getItem('theme') = ", localStorage.getItem('theme'))
-    localStorage.getItem('theme')
-  }
-
-  const setStoredTheme = theme => {
-    // console.clear()
-      console.log('■■■■■ getPreferredTheme ■■■■■■■■■■■■■■■■■■■■■■■ theme = ', theme)
-    localStorage.setItem('theme', theme)
-  }
-
-
-
-
-
-
-  /**
-   * 
-   * @returns theme
-   */
   const getPreferredTheme = () => {
-    // console.clear()
     const storedTheme = getStoredTheme()
-    if (storedTheme) { 
-      console.log('■■■■■ getPreferredTheme ■■■■■■■■■■■■■■■■■■■■■■■ storedTheme = ', storedTheme)
+    if (storedTheme) {
       return storedTheme
     }
- 
-    var test = window.matchMedia('(prefers-color-scheme: dark)').matches
-    console.log("■■■■■ getPreferredTheme ■■■■■■■■■■■■■■■■■■■■■■■ window.matchMedia('(prefers-color-scheme: dark)').matches =", test)
-    console.log("■■■■■ getPreferredTheme ■■■■■■■■■■■■■■■■■■■■■■■ window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light' =", window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   }
 
-  /**
-   * 
-   * @param {*} theme 
-   */
   const setTheme = theme => {
-    // console.clear()
-    
-    console.log('■■■■■■■ setTheme ■■■■ theme=', theme)
-          
-    var test = window.matchMedia('(prefers-color-scheme: dark)').matches
-    console.log("3 window.matchMedia('(prefers-color-scheme: dark)').matches =", test)
     if (theme === 'auto') {
       document.documentElement.setAttribute('data-bs-theme', (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'))
     } else {
@@ -73,37 +27,17 @@
     }
   }
 
-
-
-  /**
-   * get and set the preferred theme on initial load
-   */
-  console.log('get getPreferredTheme, ans set setTheme................ ')
   setTheme(getPreferredTheme())
 
-  /**
-   * 현재 활성화된 테마를 토글 버튼에 반영
-   * @param {*} theme 
-   * @param {*} focus 
-   * @returns 
-   */
   const showActiveTheme = (theme, focus = false) => {
-    // console.clear()
-    
-          console.log('■ theme=', theme)
-          const themeSwitcher = document.querySelector('#bd-theme')
-          console.log('■ themeSwitcher=', themeSwitcher)
+    const themeSwitcher = document.querySelector('#bd-theme')
 
     if (!themeSwitcher) {
-          console.log('■ themeSwitcher=', themeSwitcher)
-          console.log('■ end=', 999)
       return
     }
 
     const themeSwitcherText = document.querySelector('#bd-theme-text')
     const activeThemeIcon = document.querySelector('.theme-icon-active use')
-
-    // auto light dark 
     const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
     const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
 
@@ -123,34 +57,20 @@
     }
   }
 
-  /**
-   * change event listener for prefers-color-scheme media query
-   */
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    // console.clear()
     const storedTheme = getStoredTheme()
-    console.log('■■■■■■■■■■change ■■■■■■■■■■■ storedTheme=', storedTheme)
     if (storedTheme !== 'light' && storedTheme !== 'dark') {
       setTheme(getPreferredTheme())
     }
   })
 
-  /**
-   * DOMContentLoaded event listener
-   */
   window.addEventListener('DOMContentLoaded', () => {
-    // console.clear()
-
-    console.log('■■■■ addEventListener DOMContentLoaded')
     showActiveTheme(getPreferredTheme())
 
     document.querySelectorAll('[data-bs-theme-value]')
       .forEach(toggle => {
         toggle.addEventListener('click', () => {
-          console.clear()
-
           const theme = toggle.getAttribute('data-bs-theme-value')
-          console.log('■ theme=', theme)
           setStoredTheme(theme)
           setTheme(theme)
           showActiveTheme(theme, true)
