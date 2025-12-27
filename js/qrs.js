@@ -59,7 +59,7 @@
       card.className = "col";
       card.innerHTML = `
         <div class="card shadow-sm">
-          <div class="qrcodes"></div>
+          <div class="qrcodes p-5"></div>
           <div class="card-body">
             <p class="card-text">${exam.description}</p>
             <div class="d-flex justify-content-between align-items-center">
