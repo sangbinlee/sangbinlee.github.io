@@ -78,3 +78,138 @@
       })
   })
 })()
+
+
+ 
+    // let YOUR_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwKgYkpkDJvwsrk75Xks9m9QAribECjNjRmku1PhpEU4JLoimybMww7Da1fXmeuDY6KXA/exec';
+
+// 배포 ID
+    // AKfycbzXoeIbETaTNeK4J2j6lT_yB_93RT2aONLeudTCZLAzow0xTzobzs3Eflylsz_J_iVESw
+
+    // https://script.google.com/macros/s/AKfycbwKgYkpkDJvwsrk75Xks9m9QAribECjNjRmku1PhpEU4JLoimybMww7Da1fXmeuDY6KXA/exec
+    // https://script.google.com/macros/s/AKfycbzXoeIbETaTNeK4J2j6lT_yB_93RT2aONLeudTCZLAzow0xTzobzs3Eflylsz_J_iVESw/exec
+
+
+    // 1. 공인 IP 가져오기
+async function getPublicIP() {
+  const res = await fetch("https://api.ipify.org?format=json");
+  const data = await res.json();
+  return data.ip;
+}
+
+// 2. 구글 앱스 스크립트 Web App에 기록 요청
+async function saveIPToGoogleDrive() {
+ 
+  const ip = await getPublicIP();
+      console.log('Saving IP to Google Drive:', ip);
+
+        document.getElementById('ip').textContent = ip;
+
+        return
+
+
+
+      let YOUR_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzXoeIbETaTNeK4J2j6lT_yB_93RT2aONLeudTCZLAzow0xTzobzs3Eflylsz_J_iVESw/exec';
+
+  // 구글 앱스 스크립트 Web App URL (배포 후 얻은 URL)
+  const scriptURL = YOUR_SCRIPT_URL;
+
+  const response = await fetch(scriptURL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ip: ip })
+  });
+
+  const result = await response.text();
+  console.log("서버 응답:", result);
+}
+
+saveIPToGoogleDrive();
+
+
+
+
+
+
+
+
+
+
+
+// https://drive.usercontent.google.com/u/0/uc?id=1eQw_LJ6-wiuX-5BN0wwdoBg7h_kyToG4&export=download
+// 구글 드라이브 JSON 파일 불러오기
+// const fileId = "1eQw_LJ6-wiuX-5BN0wwdoBg7h_kyToG4"; 
+// const url = `https://drive.google.com/uc?export=download&id=${fileId}`;
+
+// fetch(url)
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log("JSON 데이터:", data);
+//     console.log("이름:", data.name);
+//     console.log("도시:", data.city);
+//   })
+//   .catch(error => console.error("에러 발생:", error));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   function generateRandomCode(length = 8) {
+//   const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+//   let result = "";
+//   for (let i = 0; i < length; i++) {
+//     result += chars.charAt(Math.floor(Math.random() * chars.length));
+//   }
+//   return result;
+// }
+
+// const codes = [];
+// for (let i = 0; i < 10; i++) {
+//   codes.push(generateRandomCode());
+// }
+
+// const data = { codes };
+
+// console.log(JSON.stringify(data, null, 2));
+
+
+
+// AKfycbwayIvLuFdEEV73u-uqMTuoioqlP-4SZ4x5IJY-aXl27ZeOrGQkED9yNDFjuhXrqNJB
+
+// https://script.google.com/macros/s/AKfycbzn-aZ7905Gfa047V5Pc0eBRzMDSIwsGoUw8OfONpNyPa_c-Knn9N_7LXPzv2F-Ofjv/exec
+
+
+// const url2 = "https://script.google.com/macros/s/AKfycbwayIvLuFdEEV73u-uqMTuoioqlP-4SZ4x5IJY-aXl27ZeOrGQkED9yNDFjuhXrqNJB/exec?callback=myFunc";
+
+// fetch(url2)
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log("API 응답:", data);
+//     // 예: codes 배열 출력
+//     data.codes.forEach(code => console.log(code));
+//   })
+//   .catch(error => console.error("에러:", error));
+
+
+
+  var pwds = [];
+
+    // JSONP 콜백 함수 정의
+    function myFunc(data) {
+      console.log("API 응답:", data);
+      pwds= data.codes
+      console.log("API 응답 pwds:", pwds);
+      document.body.innerHTML += "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+    }

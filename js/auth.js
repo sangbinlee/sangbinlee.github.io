@@ -1,16 +1,11 @@
 
     // 예시용: 허용되는 인증 코드 목록(실운영에서는 서버 검증)
-    const VALID_CODES = new Set([
-      "123456",
-      "102938",
-      "716253",
-      "716253",
-      "000999"
-    ]);
+    const VALID_CODES = new Set(pwds);
 
     // 선택: 코드 형식(숫자 6자리) 검사용 정규식
-    const CODE_PATTERN = /^[0-9]{6}$/;
-
+    const length = 8;
+    const pattern = '영문소문자 또는 숫자';
+const CODE_PATTERN = new RegExp(`^[a-z0-9]{${length}}$`);
     document.getElementById("authForm").addEventListener("submit", function (e) {
       e.preventDefault();
       const input = document.getElementById("code");
@@ -22,7 +17,7 @@
       if (
         !CODE_PATTERN.test(code) 
     ) {
-        msg.textContent = "코드는 숫자 6자리여야 합니다.";
+        msg.textContent = `코드는 ${pattern} ${length}자리여야 합니다.`
         input.focus();
         return;
       }
@@ -44,5 +39,5 @@
       // 3) 성공 시 a.html로 이동
       msg.textContent = "";
       // 필요 시 쿼리스트링으로 전달: a.html?code=...
-      window.location.href = "/test/";
+      window.location.href = "/exam/";
     });

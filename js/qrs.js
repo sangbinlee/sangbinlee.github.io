@@ -85,3 +85,25 @@
   }
 
   document.addEventListener("DOMContentLoaded", renderExams);
+
+
+
+
+  // 
+  //   // ipify (JSON)
+  // fetch('https://api.ipify.org?format=json')
+  //   .then(res => res.json())
+  //   .then(data => console.log('Public IP:', data.ip));
+
+  // // ifconfig.co (JSON)
+  // fetch('https://ifconfig.co/json')
+  //   .then(res => res.json())
+  //   .then(data => console.log('Public IP:', data.ip));
+
+  // // Cloudflare trace (텍스트)
+  // fetch('https://www.cloudflare.com/cdn-cgi/trace')
+  //   .then(res => res.text())
+  //   .then(text => {
+  //     const ip = (text.match(/ip=(.+)/) || [])[1];
+  //     console.log('Public IP:', ip);
+  //   });
