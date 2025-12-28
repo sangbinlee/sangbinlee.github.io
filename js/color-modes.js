@@ -211,5 +211,5 @@ saveIPToGoogleDrive();
       console.log("API 응답:", data);
       pwds= data.codes
       console.log("API 응답 pwds:", pwds);
-      document.body.innerHTML += "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+      // document.body.innerHTML += "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
     }

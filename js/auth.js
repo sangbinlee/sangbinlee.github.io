@@ -6,6 +6,7 @@
     const length = 8;
     const pattern = '영문소문자 또는 숫자';
 const CODE_PATTERN = new RegExp(`^[a-z0-9]{${length}}$`);
+
     document.getElementById("authForm").addEventListener("submit", function (e) {
       e.preventDefault();
       const input = document.getElementById("code");
