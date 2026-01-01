@@ -4,7 +4,7 @@ body {
   margin: 0;
   /* height: 100%; */
   /* overflow: hidden;  */
-  opacity: .9  ;
+  /* opacity: .9  ; */
 }
 .video-background {
   position: fixed;
@@ -32,11 +32,9 @@ body {
 .container-xxl.bd-gutter.masthead-followup,
 footer
  {
-    opacity: .2
-    ;
+    /* opacity: .2    ; */
 }
 
 header {
-    opacity: .6
-    ;
+    /* opacity: .6    ; */
 }

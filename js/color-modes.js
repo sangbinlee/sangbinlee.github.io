@@ -105,18 +105,31 @@ async function saveIPToGoogleDrive() {
 
         document.getElementById('ip').textContent = ip;
 
+        
+        
+      let storedIp = () => localStorage.getItem('ip')
+      console.log('storedIp:', storedIp);
+      if (ip != storedIp()) {
+        localStorage.setItem('ip', ip);
+
         // 구글 앱스 스크립트 Web App URL (배포 후 얻은 URL)
-      let YOUR_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxTESMbBcRTdlGn_5Xrz-bzJKZiAYqHJzZCN2NtD4aMqUe-hvDyhKFzonOpORdzXVsX/exec';
+        let YOUR_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxTESMbBcRTdlGn_5Xrz-bzJKZiAYqHJzZCN2NtD4aMqUe-hvDyhKFzonOpORdzXVsX/exec';
 
 
-  const response = await fetch(YOUR_SCRIPT_URL, {
-    method: "POST",
-    headers: { "Content-Type": "text/plain" },
-    body: JSON.stringify({ value: ip })
-  });
+        const response = await fetch(YOUR_SCRIPT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain" },
+          body: JSON.stringify({ value: ip })
+        });
 
-  const result = await response.json();
-  console.log("서버 응답:", result);
+        const result = await response.json();
+        console.log("서버 응답:", result);
+      }else {
+        console.log('IP is already stored. No need to save again.');
+      }
+
+
+
 }
 
 saveIPToGoogleDrive();
