@@ -7613,7 +7613,7 @@ function cu(e) {
                     // path: "/macros/s/AKfycbzr2q5Dct_iMfrGBsA0hLJeHQGyQHNwM61WPImoWnJozWGXJ0EwG-W7GsQH3oDtQbIw/exec",
                     // path: "/macros/s/AKfycbz3gWssBAze4wlolrV3xxqgi9XslXYVwV6g3IvNJInACiUSDfTGdNyhNbvZir54EpJ4/exec",
                     // path: "/macros/s/AKfycbyWm5q1obJvXLbx5t_mLUBQQN-I_VG7hulfSE4IOFH34EscWYKaMDy0bWfHfPvYY2s4/exec",
-                    path: "/json/data.json",
+                    path: "/json/data.txt",
                     // path: "https://script.google.com/macros/s/AKfycbz3gWssBAze4wlolrV3xxqgi9XslXYVwV6g3IvNJInACiUSDfTGdNyhNbvZir54EpJ4/exec",
                     queryParameters: {},
                     headers: {},
