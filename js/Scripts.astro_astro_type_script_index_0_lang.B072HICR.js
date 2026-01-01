@@ -7049,21 +7049,21 @@ function au(e) {
       }
       return r;
     })([
-      {
-        url: "".concat(e, "-1.algolianet.com"),
-        accept: "readWrite",
-        protocol: "https",
-      },
-      {
-        url: "".concat(e, "-2.algolianet.com"),
-        accept: "readWrite",
-        protocol: "https",
-      },
-      {
-        url: "".concat(e, "-3.algolianet.com"),
-        accept: "readWrite",
-        protocol: "https",
-      },
+      // {
+      //   url: "".concat(e, "-1.algolianet.com"),
+      //   accept: "readWrite",
+      //   protocol: "https",
+      // },
+      // {
+      //   url: "".concat(e, "-2.algolianet.com"),
+      //   accept: "readWrite",
+      //   protocol: "https",
+      // },
+      // {
+      //   url: "".concat(e, "-3.algolianet.com"),
+      //   accept: "readWrite",
+      //   protocol: "https",
+      // },
     ])
   );
 }
