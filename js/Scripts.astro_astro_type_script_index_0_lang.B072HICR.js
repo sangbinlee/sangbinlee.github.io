@@ -7035,7 +7035,7 @@ function au(e) {
   return [
     {
       // url: "".concat(e, "-dsn.algolia.net"),
-      url: "".concat(e, "https://sangbinlee.github.io/"),
+      url: "".concat(e, "sangbinlee.github.io"),
       accept: "read",
       protocol: "https",
       // method: "get",
