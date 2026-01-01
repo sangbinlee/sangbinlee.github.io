@@ -105,22 +105,17 @@ async function saveIPToGoogleDrive() {
 
         document.getElementById('ip').textContent = ip;
 
-        return
+        // 구글 앱스 스크립트 Web App URL (배포 후 얻은 URL)
+      let YOUR_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxTESMbBcRTdlGn_5Xrz-bzJKZiAYqHJzZCN2NtD4aMqUe-hvDyhKFzonOpORdzXVsX/exec';
 
 
-
-      let YOUR_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzXoeIbETaTNeK4J2j6lT_yB_93RT2aONLeudTCZLAzow0xTzobzs3Eflylsz_J_iVESw/exec';
-
-  // 구글 앱스 스크립트 Web App URL (배포 후 얻은 URL)
-  const scriptURL = YOUR_SCRIPT_URL;
-
-  const response = await fetch(scriptURL, {
+  const response = await fetch(YOUR_SCRIPT_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ ip: ip })
+    headers: { "Content-Type": "text/plain" },
+    body: JSON.stringify({ value: ip })
   });
 
-  const result = await response.text();
+  const result = await response.json();
   console.log("서버 응답:", result);
 }
 
@@ -133,7 +128,16 @@ saveIPToGoogleDrive();
 
 
 
-
+// var YOUR_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxasLflI3_9lhvbGKKot8PJDa9Nogh71grkHCHdcaE7_mFuVXObXmtAiN2LqMvvwI6IOA/exec';
+// fetch(YOUR_WEB_APP_URL, {
+//   method: "POST",
+//   body: JSON.stringify({value: "Hello Google Drive!"}),
+//   headers: {
+//     "Content-Type": "application/json"
+//   }
+// })
+// .then(res => res.json())
+// .then(data => console.log(data));
 
 
 // https://drive.usercontent.google.com/u/0/uc?id=1eQw_LJ6-wiuX-5BN0wwdoBg7h_kyToG4&export=download

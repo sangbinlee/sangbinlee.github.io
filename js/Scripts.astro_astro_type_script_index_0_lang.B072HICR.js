@@ -7034,7 +7034,8 @@ var ou = ["appId", "apiKey", "authMode", "algoliaAgents"],
 function au(e) {
   return [
     {
-      url: "".concat(e, "-dsn.algolia.net"),
+      // url: "".concat(e, "-dsn.algolia.net"),
+      url: "".concat(e, "script.google.com"),
       accept: "read",
       protocol: "https",
     },
@@ -7134,8 +7135,9 @@ function cu(e) {
       return u.useMemo(
         function () {
           var me = (function (de, _e) {
-            if (!de || typeof de != "string")
-              throw new Error("`appId` is missing.");
+            console.log(`apid de=${de}`)
+            // if (!de || typeof de != "string")
+            //   throw new Error("`appId` is missing.");
             if (!_e || typeof _e != "string")
               throw new Error("`apiKey` is missing.");
             return (function (U) {
@@ -7606,7 +7608,8 @@ function cu(e) {
                     );
                   var ye = {
                     method: "POST",
-                    path: "/1/indexes/*/queries",
+                    // path: "/1/indexes/*/queries",
+                    path: "/macros/s/AKfycbzr2q5Dct_iMfrGBsA0hLJeHQGyQHNwM61WPImoWnJozWGXJ0EwG-W7GsQH3oDtQbIw/exec",
                     queryParameters: {},
                     headers: {},
                     data: T,
@@ -8226,7 +8229,8 @@ function su(e) {
   const e = {
       apiKey: "3151f502c7b9e9dafd5e6372b691a24e",
       indexName: "bootstrap",
-      appId: "AK7KMZKZHQ",
+      // appId: "AK7KMZKZHQ",
+      appId: "",
     },
     t = document.getElementById("docsearch");
   if (!t) return;
