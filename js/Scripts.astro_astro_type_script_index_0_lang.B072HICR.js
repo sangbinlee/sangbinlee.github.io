@@ -7037,7 +7037,7 @@ function au(e) {
       // url: "".concat(e, "-dsn.algolia.net"),
       url: "".concat(e, "https://sangbinlee.github.io/"),
       accept: "read",
-      protocol: "http",
+      protocol: "https",
       // method: "get",
     },
     { url: "".concat(e, ".algolia.net"), accept: "write", protocol: "https" },
