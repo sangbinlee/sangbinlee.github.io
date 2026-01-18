@@ -58,10 +58,40 @@
       footer a:hover {
         color: #fff;
       }
+      /* Bible Verse Banner */
+      .verse-banner {
+        background: linear-gradient(135deg, #6610f2 0%, #0d6efd 100%);
+        color: #fff;
+        padding: 12px 0;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.6;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .verse-banner .verse-text {
+        margin: 0;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+      }
+      .verse-banner .verse-ref {
+        font-size: 12px;
+        opacity: 0.9;
+        margin-left: 8px;
+      }
     </style>
   </head>
 
   <body>
+    <!-- Bible Verse Banner -->
+    <div class="verse-banner">
+      <div>
+        <p class="verse-text">로딩 중...</p>
+      </div>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
@@ -69,7 +99,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
           aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
+        <!-- </button> -->
 
         <div id="nav" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
@@ -217,5 +247,44 @@
       integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Load Bible Verses -->
+    <script>
+      // Google Apps Script Web App URL (수정 필요)
+      const GOOGLE_APPS_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+
+      async function loadBibleVerse() {
+        const verseElement = document.querySelector('.verse-banner .verse-text');
+        
+        try {
+          // 로컬 JSON 파일에서 로드 (Google Sheet 데이터를 JSON으로 변환한 파일)
+          const response = await fetch('/json/bible-verses.json');
+          
+          if (!response.ok) {
+            throw new Error('Failed to load verses');
+          }
+          
+          const data = await response.json();
+          const activeVerses = data.verses.filter(v => v.isActive === true || v.isActive === 'TRUE');
+          
+          if (activeVerses.length === 0) {
+            verseElement.textContent = '성경구절 로딩 대기중...';
+            return;
+          }
+          
+          // 랜덤하게 성경구절 선택 또는 첫 번째 활성화된 구절 사용
+          const verse = activeVerses[0];
+          const verseText = `${verse.scripture} — ${verse.book} ${verse.chapter}:${verse.verse}`;
+          
+          verseElement.innerHTML = verseText;
+        } catch (error) {
+          console.error('Bible verse loading error:', error);
+          verseElement.textContent = '말씀을 묵상하는 시간을 가져보세요.';
+        }
+      }
+      
+      // 페이지 로드 시 성경구절 로드
+      document.addEventListener('DOMContentLoaded', loadBibleVerse);
+    </script>
   </body>
 </html>

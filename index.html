@@ -34,6 +34,13 @@
   </head>
   <!-- <body class="d-flex h-100 text-center bg-body-tertiary"> -->
   <body>
+    <!-- Bible Verse Banner -->
+    <div class="verse-banner" style="background: linear-gradient(135deg, #6610f2 0%, #0d6efd 100%); color: #fff; padding: 12px 0; text-align: center; font-size: 14px; line-height: 1.6; min-height: 50px; display: flex; align-items: center; justify-content: center;">
+      <div>
+        <p class="verse-text" style="margin: 0; font-weight: 500; letter-spacing: 0.3px;">로딩 중...</p>
+      </div>
+    </div>
+
     <!-- <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path
@@ -2009,6 +2016,34 @@
         };
       p();
       v();
+
+      // Load Bible Verses
+      async function loadBibleVerse() {
+        const verseElement = document.querySelector('.verse-banner .verse-text');
+        if (!verseElement) return;
+        
+        try {
+          const response = await fetch('/json/bible-verses.json');
+          if (!response.ok) throw new Error('Failed to load verses');
+          
+          const data = await response.json();
+          const activeVerses = data.verses.filter(v => v.isActive === true || v.isActive === 'TRUE');
+          
+          if (activeVerses.length === 0) {
+            verseElement.textContent = '성경구절 로딩 대기중...';
+            return;
+          }
+          
+          const verse = activeVerses[0];
+          const verseText = `${verse.scripture} — ${verse.book} ${verse.chapter}:${verse.verse}`;
+          verseElement.innerHTML = verseText;
+        } catch (error) {
+          console.error('Bible verse loading error:', error);
+          verseElement.textContent = '말씀을 묵상하는 시간을 가져보세요.';
+        }
+      }
+      
+      loadBibleVerse();
     </script>
   </body>
 </html>
