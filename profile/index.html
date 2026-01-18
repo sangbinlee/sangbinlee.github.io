@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Profile</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Icons (Bootstrap Icons) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --brand: #0d6efd;
+      }
+      body {
+        background: #f8f9fa;
+      }
+      .hero {
+        background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+        color: #fff;
+      }
+      .avatar {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 10px 20px rgba(0,0,0,.15);
+      }
+      .section-title {
+        font-weight: 700;
+        letter-spacing: .2px;
+      }
+      .contact-card i {
+        color: var(--brand);
+      }
+      .social a {
+        color: #495057;
+      }
+      .social a:hover {
+        color: var(--brand);
+      }
+      footer a {
+        color: rgba(255,255,255,.85);
+        text-decoration: none;
+      }
+      footer a:hover {
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="#">MyProfile</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+          aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="nav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#social">Social</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero / Header -->
+    <header class="hero py-5">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-12 col-md-4 text-center">
+            <img src="https://via.placeholder.com/280x280.png?text=Your+Photo" alt="Profile photo" class="avatar" />
+          </div>
+          <div class="col-12 col-md-8 text-center text-md-start">
+            <h1 class="display-5 fw-bold mb-2">이 상빈(SANG BIN LEE)</h1>
+            <p class="lead mb-3">WEB DEVELOPER · WEB-APP · SEOUL</p>
+            <p class="mb-4">
+              Short tagline about what you do and what you care about—keep it crisp and memorable.
+            </p>
+            <a href="#contact" class="btn btn-light btn-lg me-2">
+              <i class="bi bi-envelope-fill me-1"></i> Contact
+            </a>
+            <a href="#social" class="btn btn-outline-light btn-lg">
+              <i class="bi bi-share-fill me-1"></i> Connect
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- About / Bio -->
+          <section id="about" class="col-12 col-lg-8">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <h2 class="section-title h4 mb-3">About</h2>
+                <p>
+                  Write a concise bio (3–5 sentences). Highlight your core skills, recent achievements,
+                  and what you’re looking for. Mention industries, tools, or problems you love solving.
+                </p>
+                <div class="row g-3 mt-2">
+                  <div class="col-12 col-md-6">
+                    <h3 class="h6 text-uppercase text-muted mb-2">Core skills</h3>
+                    <ul class="list-unstyled mb-0">
+                      <li>html</li>
+                      <li>css</li>
+                      <li>javascript</li>
+                      <li>jquery</li>
+                      <li>angular</li>
+                      <li>bootstrap</li>
+                      <li>vue</li>
+                      <li>react</li>
+                      <li>react native</li>
+                      <li>android</li>
+                      <li>flutter</li>
+                      <li>expo</li>
+                      <li>java</li>
+                      <li>sql</li>
+                      <li>mybatis</li>
+                      <li>spring boot</li>
+                      <li>spring batch</li>
+                      <li>k8s</li>
+                      <li>jenkins</li>
+                      <li>oracle</li>
+                      <li>postgresql</li>
+                      <li>mysql</li>
+                      <li>maria</li>
+                      <li>mssql</li>
+                      <li>wildfly</li>
+                      <li>tomcat</li>
+                      <li>apache</li>
+                      <li>nginx</li>
+                    </ul>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <h3 class="h6 text-uppercase text-muted mb-2">Recent achievements</h3>
+                      <ul class="list-unstyled mb-0">
+                        <li>https://sangbinlee.github.io/</li>
+                        <li>K8S</li>
+                        <li>ANDROID APP.</li>
+                        <li>FLUTTER APP.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                </section>
+            <!-- Contact Info -->
+            <section id="contact" class="col-12 col-lg-4">
+              <div class="card border-0 shadow-sm contact-card">
+                <div class="card-body p-4">
+                  <h2 class="section-title h4 mb-3">Contact</h2>
+                  <p class="mb-2">
+                    <i class="bi bi-envelope-fill me-2"></i>
+                    <a href="mailto:sangbinlee9.@gmail.com">sangbinlee9.@gmail.com</a>
+                  </p>  
+                    <p class="mb-2">
+                        <i class="bi bi-telephone-fill me-2"></i>
+                        <a href="tel:+1234567890">010-3330-7962</a>
+                    </p>
+                    <p class="mb-0">
+                        <i class="bi bi-geo-alt-fill me-2"></i>
+                        Seoul, South Korea
+                    </p>
+                </div>
+                </div>
+            </section>
+            <!-- Social Links -->
+            <section id="social" class="col-12">
+              <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                  <h2 class="section-title h4 mb-3">Social</h2>
+                  <div class="social d-flex gap-3">
+                    <a href="#" class="fs-4" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/sangbinlee" class="fs-4" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    <a href="#" class="fs-4" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="fs-4" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="fs-4" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                  </div>    
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <p class="mb-0">
+          &copy; 2026 SANG BIN LEE. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
